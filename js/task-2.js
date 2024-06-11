@@ -1,4 +1,8 @@
 function calcAverageCalories(days) {
+    if (days.length === 0) {
+        return 0;
+    }
+
     let totalCalories = 0;
 
     for (let i = 0; i < days.length; i++) {
@@ -8,16 +12,6 @@ function calcAverageCalories(days) {
     return totalCalories / days.length;
 }
 
-
-const weekData = [
-    { day: 'Monday', calories: 2200 },
-    { day: 'Tuesday', calories: 2100 },
-    { day: 'Wednesday', calories: 2300 },
-    { day: 'Thursday', calories: 2400 },
-    { day: 'Friday', calories: 2000 },
-    { day: 'Saturday', calories: 2500 },
-    { day: 'Sunday', calories: 1800 }
-];
 
 console.log(
   calcAverageCalories([
